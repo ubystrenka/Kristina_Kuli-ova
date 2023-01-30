@@ -1,0 +1,29 @@
+# Задания 5, 6, 7
+
+
+stages:
+  - tests
+  - build-image
+  - deploy
+
+before_script:
+  - whoami ; pwd
+  - docker login -u "****" -p "****" ****
+
+
+# Запуск unit-tests
+# Команда запускающая тесты: make tests
+# Игнорировать ошибки при выполнения этого задания
+tests:
+  stage: tests
+  ...
+
+# Сборка и публикация docker image в gitlab registry
+build:
+  stage: build
+  ...
+
+# Деплой приложения в docker-swarm кластер
+deploy:
+  stage: deploy
+  ...

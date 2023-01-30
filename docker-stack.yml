@@ -1,0 +1,19 @@
+# Задание 3
+
+services:
+  postgres:
+    ...
+
+  redis:
+    ...
+
+  nginx:
+    ...
+
+  # Команда для запуска: make run
+  app:
+    ...
+
+  # Команда для запуска: make run-celery
+  celery-app:
+    ...
