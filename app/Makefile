@@ -54,20 +54,9 @@ run:
 	$(PYTHON) manage.py runserver
 
 
-.PHONY: run-app
-run-app:
-	@if [ $(ENV_DEBUG) = "True" ]; then \
-  		echo "Running the development app with manage.py" ;\
-		$(PYTHON) manage.py runserver ;\
-	else \
-		echo "Running the production app with gunicorn" ;\
-		$(RUN) gunicorn --bind 0.0.0.0:80 $(WSGI_APPLICATION) ;\
-	fi \
-
-
 .PHONY: run-celery
 run-celery:
-	$(RUN) celery -A main worker -B --loglevel=debug
+	$(RUN) celery -A tt_web_app worker -B --loglevel=debug
 
 
 # Секция утилит 
