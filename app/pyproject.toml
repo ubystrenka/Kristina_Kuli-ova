@@ -3,7 +3,6 @@ name = "app"
 version = "0.1.0"
 description = ""
 authors = ["irocshers <develop.iam@rocshers.com>"]
-packages = [{include = "tt_web_app"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
